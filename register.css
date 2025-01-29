@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.inputbox input,
+.inputbox textarea,
+.inputbox select {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label,
+.inputbox textarea:focus ~ label,
+.inputbox textarea:valid ~ label,
+.inputbox select:focus ~ label,
+.inputbox select:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.inputbox textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.inputbox select {
+    appearance: none;
+    padding-right: 40px;
+}
+
+.inputbox select:focus {
+    outline: none;
+}
+
+.inputbox label[for="city"] {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.inputbox label[for="hobbies"],
+.inputbox label[for="gender"] {
+    position: static;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.inputbox input[type="checkbox"],
+.inputbox input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register p {
+    display: inline;
+}
+
+.register a {
+    color: #333;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
