@@ -1,3 +1,5 @@
+
+
 const loginForm = document.getElementById('loginForm'); 
 if (loginForm) {
     loginForm.addEventListener('submit', function(event) {
@@ -64,58 +66,7 @@ if (loginForm) {
     
 }
 
-document.getElementById('email').addEventListener('input', function() {
-    const email = this.value;
-    const emailAlert = document.getElementById('emailAlert');
-    if (!email.endsWith('@gmail.com')) {
-        emailAlert.textContent = 'Email should contain @gmail.com.';
-    } else {
-        emailAlert.textContent = '';
-    }
-});
 
-document.getElementById('mobileno').addEventListener('input', function() {
-    const mobileno = this.value;
-    const mobileAlert = document.getElementById('mobileAlert');
-    if (mobileno.length !== 10 || isNaN(mobileno)) {
-        mobileAlert.textContent = 'Mobile number should be 10 digits.';
-    } else {
-        mobileAlert.textContent = '';
-    }
-});
-
-function validateForm(event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const mobileno = document.getElementById('mobileno').value;
-
-    const emailAlert = document.getElementById('emailAlert');
-    const mobileAlert = document.getElementById('mobileAlert');
-
-    let isValid = true;
-
-    // Email validation
-    if (!email.endsWith('@gmail.com')) {
-        emailAlert.textContent = 'Email should contain @gmail.com.';
-        isValid = false;
-    } else {
-        emailAlert.textContent = '';
-    }
-
-    // Mobile number validation
-    if (mobileno.length !== 10 || isNaN(mobileno)) {
-        mobileAlert.textContent = 'Mobile number should be 10 digits.';
-        isValid = false;
-    } else {
-        mobileAlert.textContent = '';
-    }
-
-    if (isValid) {
-        alert('Registration successful!');
-    }
-    return isValid;
-}
 
 
 document.getElementById('email').addEventListener('input', function() {
