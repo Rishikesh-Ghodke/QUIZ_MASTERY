@@ -1,134 +1,169 @@
 body {
     font-family: 'Roboto Slab', serif;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     margin: 0;
+    padding: 20px;
 }
 
 .form-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 
+                0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
     width: 100%;
-    max-width: 500px;
-}
-
-.form-value {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 500px; /* Increased from 600px */
 }
 
 .inputbox {
     position: relative;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.inputbox ion-icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    margin-bottom: 45px;
+    width: 400px;
 }
 
 .inputbox input,
 .inputbox textarea,
 .inputbox select {
+    width: 450px;
+    padding: 15px 15px 15px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f8f9fa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.inputbox input:focus,
+.inputbox textarea:focus,
+.inputbox select:focus {
+    border-color: #84fab0;
+    box-shadow: 0 0 0 4px rgba(132, 250, 176, 0.1);
+}
+
+.inputbox .radio-group,
+.inputbox .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
-    padding: 10px 10px 10px 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 5px;
+    background: #f8f9fa;
     box-sizing: border-box;
 }
 
-.inputbox label {
-    position: absolute;
-    top: 10px;
-    left: 40px;
-    pointer-events: none;
-    transition: 0.5s;
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    color: #2c3e50;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.inputbox input:focus ~ label,
-.inputbox input:valid ~ label,
-.inputbox textarea:focus ~ label,
-.inputbox textarea:valid ~ label,
-.inputbox select:focus ~ label,
-.inputbox select:valid ~ label {
-    top: -10px;
-    left: 10px;
-    font-size: 12px;
-    color: #333;
-}
-
-.inputbox textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-.inputbox select {
-    appearance: none;
-    padding-right: 40px;
-}
-
-.inputbox select:focus {
-    outline: none;
-}
-
-.inputbox label[for="city"] {
-    top: -10px;
-    left: 10px;
-    font-size: 12px;
-    color: #333;
-}
-
-.inputbox label[for="hobbies"],
-.inputbox label[for="gender"] {
-    position: static;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
-}
-
-.inputbox input[type="checkbox"],
-.inputbox input[type="radio"] {
-    width: auto;
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4a90e2;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 button {
-    padding: 10px 20px;
+    background: linear-gradient(120deg, #84fab0 0%, #0a0239 100%);
     border: none;
-    border-radius: 5px;
-    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
     color: #fff;
+    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(132, 250, 176, 0.3);
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(132, 250, 176, 0.4);
 }
 
 .register {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
-}
-
-.register p {
-    display: inline;
+    color: #666;
 }
 
 .register a {
-    color: #333;
+    color: #4a90e2;
     text-decoration: none;
+    font-weight: 600;
+    margin-left: 15px;
 }
 
 .register a:hover {
     text-decoration: underline;
+}
+
+.alert {
+    color: #dc3545;
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+}
+
+.table-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 
+                0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+@media (max-width: 768px) {
+    .form-box {
+        padding: 30px 20px;
+        margin: 45px;
+    }
 }
