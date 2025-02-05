@@ -10,7 +10,7 @@ if (loginForm) {
 
         // Brute force username validation
         let isUsernameValid = true;
-        if (username.length > 10) {
+        if (username.length <4) {
             isUsernameValid = false;
         }
         for (let i = 0; i < username.length; i++) {
@@ -21,7 +21,7 @@ if (loginForm) {
             }
         }
         if (!isUsernameValid) {
-            alert('Username should only contain alphabets and be less than or equal to 10 characters.');
+            alert('Username should only contain alphabets and be greater than or equal to 4 characters.');
             return;
         }
 
@@ -132,11 +132,11 @@ function validateForm(event) {
             hobbies
         };
 
-        // Simulate AJAX request
-        setTimeout(() => {
+        
+        
             addUserToTable(userData);
             showTable();
-        }, 500);
+        
     }
     return isValid;
 }
